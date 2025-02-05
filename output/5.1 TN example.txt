@@ -1,0 +1,5 @@
+Original text:
+Mr. Johnson is turning 35 years old on 04-15-2023.
+
+Normalized text:
+mister Johnson is turning thirty five years old on april fifteenth twenty twenty three.

@@ -1,0 +1,19 @@
+Vocoder Analysis Report
+=====================
+
+Input Text: This is a test audio for vocoder analysis.
+
+Process Steps:
+1. Generate original audio using FastPitch
+2. Extract mel spectrogram from generated audio
+3. Reconstruct audio using HiFi-GAN vocoder
+4. Compare original and reconstructed spectrograms
+
+Audio Settings:
+- Sample rate: 22050 Hz
+- Processing device: cuda
+
+Output Files:
+1. original_audio.wav - Original synthesized audio
+2. reconstructed_audio.wav - Reconstructed audio using vocoder
+3. spectrogram_comparison.png - Visual comparison of spectrograms

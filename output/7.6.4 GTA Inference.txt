@@ -1,0 +1,18 @@
+Ground Truth Aligned (GTA) Inference Analysis
+=========================================
+
+Input text: That is not only my accusation.
+
+Processing Steps:
+1. Regular Inference: Generate audio directly from text
+2. GTA Inference: Use ground truth audio to guide generation
+3. Compare outputs to understand teacher forcing effects
+
+Audio sample rate: 22050 Hz
+Audio duration: 1.93 seconds
+Processing device: cuda
+
+Output Files:
+1. simulated_original.wav - Simulated ground truth audio
+2. gta_synthesis.wav - Audio generated using GTA inference
+3. regular_synthesis.wav - Audio generated using regular inference

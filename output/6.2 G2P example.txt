@@ -1,0 +1,17 @@
+G2P (Grapheme-to-Phoneme) and Tokenization Results
+=============================================
+
+G2P Results:
+Input text: Hello world
+ARPABET phonemes: ['HH', 'AH0', 'L', 'OW1', ' ', 'W', 'ER1', 'L', 'D']
+
+Pronunciations for 'hello' in dictionary:
+[['HH', 'AH0', 'L', 'OW1'], ['HH', 'EH0', 'L', 'OW1']]
+
+G2P with ignore_ambiguous_words=False:
+Input text: Hello world
+ARPABET phonemes: ['HH', 'AH0', 'L', 'OW1', ' ', 'W', 'ER1', 'L', 'D']
+
+Tokenization Results:
+Input text: Hello world
+ARPABET tokens: [7, 27, 10, 36, 0, 21, 32, 10, 3]

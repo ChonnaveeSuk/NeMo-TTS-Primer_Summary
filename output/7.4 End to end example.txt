@@ -1,0 +1,138 @@
+End-to-end Text-to-Speech Example
+================================
+
+Input text: This audio was generated with a text-to-speech model.
+
+Available Models:
+----------------
+Spectrogram Models:
+[PretrainedModelInfo(
+	pretrained_model_name=tts_en_fastpitch,
+	description=This model is trained on LJSpeech sampled at 22050Hz with and can be used to generate female English voices with an American accent. It is ARPABET-based.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_fastpitch/versions/1.8.1/files/tts_en_fastpitch_align.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_fastpitch_ipa,
+	description=This model is trained on LJSpeech sampled at 22050Hz with and can be used to generate female English voices with an American accent. It is IPA-based.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_fastpitch/versions/IPA_1.13.0/files/tts_en_fastpitch_align_ipa.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_fastpitch_multispeaker,
+	description=This model is trained on HiFITTS sampled at 44100Hz with and can be used to generate male and female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_multispeaker_fastpitchhifigan/versions/1.10.0/files/tts_en_fastpitch_multispeaker.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_de_fastpitch_singleSpeaker_thorstenNeutral_2102,
+	description=This model is trained on a single male speaker data in Thorsten Müller’s German Neutral 21.02 Dataset sampled at 22050Hz and can be used to generate male German voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_de_fastpitchhifigan/versions/1.15.0/files/tts_de_fastpitch_thorstens2102.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_de_fastpitch_singleSpeaker_thorstenNeutral_2210,
+	description=This model is trained on a single male speaker data in Thorsten Müller’s German Neutral 22.10 Dataset sampled at 22050Hz and can be used to generate male German voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_de_fastpitchhifigan/versions/1.15.0/files/tts_de_fastpitch_thorstens2210.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_de_fastpitch_multispeaker_5,
+	description=This model is trained on 5 speakers in HUI-Audio-Corpus-German clean subset sampled at 44100Hz with and can be used to generate male and female German voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_de_fastpitch_multispeaker_5/versions/1.11.0/files/tts_de_fastpitch_multispeaker_5.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_es_fastpitch_multispeaker,
+	description=This model is trained on 174 speakers in 6 crowdsourced Latin American Spanish OpenSLR datasets sampled at 44100Hz and can be used to generate male and female Spanish voices with Latin American accents.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_es_multispeaker_fastpitchhifigan/versions/1.15.0/files/tts_es_fastpitch_multispeaker.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_zh_fastpitch_sfspeech,
+	description=This model is trained on a single female speaker in SFSpeech Bilingual Chinese/English dataset sampled at 22050Hz and can be used to generate female Mandarin Chinese voices. It is improved using richer dict and jieba word segmenter for polyphone disambiguation.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_zh_fastpitch_hifigan_sfspeech/versions/1.15.0/files/tts_zh_fastpitch_sfspeech.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_fastpitch_for_asr_finetuning,
+	description=This model is trained on LibriSpeech, train-960 subset. STFT parameters follow those commonly used in ASR: 25 ms window, 10 ms hop. This model is supposed to be used with its companion SpetrogramEnhancer for  ASR fine-tuning. Usage for regular TTS tasks is not advised.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_fastpitch_spectrogram_enhancer_for_asr_finetuning/versions/1.20.0/files/tts_en_fastpitch_for_asr_finetuning.nemo,
+	class_=<class 'nemo.collections.tts.models.fastpitch.FastPitchModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_lj_mixertts,
+	description=This model is trained on LJSpeech sampled at 22050Hz with and can be used to generate female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_lj_mixertts/versions/1.6.0/files/tts_en_lj_mixertts.nemo,
+	class_=<class 'nemo.collections.tts.models.mixer_tts.MixerTTSModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_lj_mixerttsx,
+	description=This model is trained on LJSpeech sampled at 22050Hz with and can be used to generate female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_lj_mixerttsx/versions/1.6.0/files/tts_en_lj_mixerttsx.nemo,
+	class_=<class 'nemo.collections.tts.models.mixer_tts.MixerTTSModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_tacotron2,
+	description=This model is trained on LJSpeech sampled at 22050Hz, and can be used to generate female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_tacotron2/versions/1.10.0/files/tts_en_tacotron2.nemo,
+	class_=<class 'nemo.collections.tts.models.tacotron2.Tacotron2Model'>
+)]
+
+Vocoder Models:
+[PretrainedModelInfo(
+	pretrained_model_name=tts_en_waveglow_88m,
+	description=This model is trained on LJSpeech sampled at 22050Hz, and has been tested on generating female English voices with an American accent and Mandarin voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_waveglow_88m/versions/1.0.0/files/tts_waveglow.nemo,
+	class_=<class 'nemo.collections.tts.models.waveglow.WaveGlowModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_hifigan,
+	description=This model is trained on LJSpeech audio sampled at 22050Hz and mel spectrograms generated from Tacotron2, TalkNet, and FastPitch. This model has been tested on generating female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_hifigan/versions/1.0.0rc1/files/tts_hifigan.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_lj_hifigan_ft_mixertts,
+	description=This model is trained on LJSpeech audio sampled at 22050Hz and mel spectrograms generated from Mixer-TTS. This model has been tested on generating female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_lj_hifigan/versions/1.6.0/files/tts_en_lj_hifigan_ft_mixertts.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_lj_hifigan_ft_mixerttsx,
+	description=This model is trained on LJSpeech audio sampled at 22050Hz and mel spectrograms generated from Mixer-TTS-X. This model has been tested on generating female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_lj_hifigan/versions/1.6.0/files/tts_en_lj_hifigan_ft_mixerttsx.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_hifitts_hifigan_ft_fastpitch,
+	description=This model is trained on HiFiTTS audio sampled at 44100Hz and mel spectrograms generated from FastPitch. This model has been tested on generating male and female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_multispeaker_fastpitchhifigan/versions/1.10.0/files/tts_en_hifitts_hifigan_ft_fastpitch.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_de_hifigan_singleSpeaker_thorstenNeutral_2102,
+	description=This model is finetuned from the HiFiGAN pretrained checkpoint `tts_en_lj_hifigan_ft_mixerttsx` by the mel-spectrograms generated from the FastPitch checkpoint `tts_de_fastpitch_singleSpeaker_thorstenNeutral_2102`. This model has been tested on generating male German neutral voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_de_fastpitchhifigan/versions/1.15.0/files/tts_de_hifigan_thorstens2102.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_de_hifigan_singleSpeaker_thorstenNeutral_2210,
+	description=This model is finetuned from the HiFiGAN pretrained checkpoint `tts_en_lj_hifigan_ft_mixerttsx` by the mel-spectrograms generated from the FastPitch checkpoint `tts_de_fastpitch_singleSpeaker_thorstenNeutral_2210`. This model has been tested on generating male German neutral voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_de_fastpitchhifigan/versions/1.15.0/files/tts_de_hifigan_thorstens2210.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_de_hui_hifigan_ft_fastpitch_multispeaker_5,
+	description=This model is finetuned from the HiFiGAN pretrained checkpoint `tts_en_hifitts_hifigan_ft_fastpitch` by the mel-spectrograms generated from the FastPitch checkpoint `tts_de_fastpitch_multispeaker_5`. This model has been tested on generating male and female German voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_de_fastpitch_multispeaker_5/versions/1.11.0/files/tts_de_hui_hifigan_ft_fastpitch_multispeaker_5.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_es_hifigan_ft_fastpitch_multispeaker,
+	description=This model is trained on the audio from 6 crowdsourced Latin American Spanish OpenSLR datasets and finetuned on the mel-spectrograms generated from the FastPitch checkpoint `tts_es_fastpitch_multispeaker`. This model has been tested on generating male and female Spanish voices with Latin American accents.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_es_multispeaker_fastpitchhifigan/versions/1.15.0/files/tts_es_hifigan_ft_fastpitch_multispeaker.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_zh_hifigan_sfspeech,
+	description=This model is finetuned from the HiFiGAN pretrained checkpoint `tts_en_lj_hifigan_ft_mixerttsx` by the mel-spectrograms generated from the FastPitch checkpoint `tts_zh_fastpitch_sfspeech`. This model has been tested on generating female Mandarin Chinese voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_zh_fastpitch_hifigan_sfspeech/versions/1.15.0/files/tts_zh_hifigan_sfspeech.nemo,
+	class_=<class 'nemo.collections.tts.models.hifigan.HifiGanModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_lj_univnet,
+	description=This model is trained on LJSpeech sampled at 22050Hz, and has been tested on generating female English voices with an American accent.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_lj_univnet/versions/1.7.0/files/tts_en_lj_univnet.nemo,
+	class_=<class 'nemo.collections.tts.models.univnet.UnivNetModel'>
+), PretrainedModelInfo(
+	pretrained_model_name=tts_en_libritts_univnet,
+	description=This model is trained on all LibriTTS training data (train-clean-100, train-clean-360, and train-other-500) sampled at 22050Hz, and has been tested on generating English voices.,
+	location=https://api.ngc.nvidia.com/v2/models/nvidia/nemo/tts_en_libritts_univnet/versions/1.7.0/files/tts_en_libritts_multispeaker_univnet.nemo,
+	class_=<class 'nemo.collections.tts.models.univnet.UnivNetModel'>
+)]
+
+Processing Device: cuda
+
+Output Files:
+1. spectrogram.png - Visualization of the generated spectrogram
+Note: Audio and spectrogram visualization were generated successfully.

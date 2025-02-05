@@ -1,0 +1,22 @@
+FastPitch Text-to-Speech Synthesis Report
+=====================================
+
+Text 1:
+"That is not only my accusation."
+
+Generated Files:
+1. spectrogram_1.png - Mel spectrogram visualization
+2. audio_1.wav - Synthesized speech
+
+Text 2:
+"This audio was generated with the FastPitch text-to-speech model."
+
+Generated Files:
+1. spectrogram_2.png - Mel spectrogram visualization
+2. audio_2.wav - Synthesized speech
+
+
+System Information:
+- Sample rate: 22050 Hz
+- Processing device: cuda
+- Models used: FastPitch (text-to-spectrogram) and HiFi-GAN (vocoder)
